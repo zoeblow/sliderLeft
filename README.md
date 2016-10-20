@@ -44,9 +44,10 @@ sliderLeft 是一款模拟QQ这样的软件左滑操作(删除、重命名、置
 ###参数
 
 sliderLeft(ele,rightEle);
-| 参数    | 取值类型   |  默认值  | 描述|
-| :----:  | :----:  | :----:  | :----:  |
-| ele   | String |   必填项     | 那个区域需要用到滑动操作： zepto/jquery 选择器 |
-| rightEle | String |  必填项 |   操作按钮组的选择器 ： zepto/jquery 选择器 |
+
+| 参数  | 取值类型 |  默认值  | 描述 |
+| :----:  | :----:  | :----:  | :----: |
+| ele | String |  必填项   | 那个区域需要用到滑动操作： zepto/jquery 选择器 |
+| rightEle | String | 必填项 | 操作按钮组的选择器 ： zepto/jquery 选择器 |
 
 -----
