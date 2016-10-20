@@ -1,0 +1,94 @@
+<!doctype html>  
+<html>  
+    <head>  
+        <meta charset="utf-8">  
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>左划出现删除按钮，右滑隐藏</title>  
+         <link rel="stylesheet" type="text/css" href="../dist/style/sliderLeft.css" />  
+    </head>  
+    <body>  
+        <div class="wrapper">
+            <div class="line-wrapper">  
+                <div class="line-scroll-wrapper">  
+                    <div class="line-normal-wrapper">这是来自老刘发来的消息呢</div>  
+                    <div class="left-btn ">
+                        <div class="left-btn-child btn-del">删除</div>
+                    </div>  
+                </div>  
+            </div>  
+            <div class="line-wrapper">  
+                <div class="line-scroll-wrapper">  
+                    <div class="line-normal-wrapper">1990年的十大趣闻</div>  
+                    <div class="left-btn ">
+                        <div class="left-btn-child btn-del">删除</div>
+                    </div>
+                </div>  
+            </div>
+            <div class="line-wrapper">  
+                <div class="line-scroll-wrapper">  
+                    <div class="line-normal-wrapper"> 这是来自老王发来的消息呢 </div>  
+                    <div class="left-btn ">
+                        <div class="left-btn-child btn-totop">置顶</div>
+                        <div class="left-btn-child btn-del">删除</div>
+                    </div>  
+                </div>  
+            </div>   
+            <div class="line-wrapper">  
+                <div class="line-scroll-wrapper">  
+                    <div class="line-normal-wrapper">不得不看的十大奇闻</div>  
+                    <div class="left-btn ">
+                        <div class="left-btn-child btn-del">删除</div>
+                    </div>
+                </div>  
+            </div>  
+            <div class="line-wrapper">  
+                <div class="line-scroll-wrapper">  
+                    <div class="line-normal-wrapper">是男人就冲到一百关</div>  
+                    <div class="left-btn ">
+                        <div class="left-btn-child btn-del">删除</div>
+                    </div>
+                </div>  
+            </div>  
+            <div class="line-wrapper">  
+                <div class="line-scroll-wrapper">  
+                    <div class="line-normal-wrapper">这是来自老张发来的消息呢</div>  
+                    <div class="left-btn ">
+                        <div class="left-btn-child btn-del">删除</div>
+                    </div>
+                </div>  
+            </div>  
+            <div class="line-wrapper">  
+                <div class="line-scroll-wrapper">  
+                    <div class="line-normal-wrapper">香水百合的唱法</div>  
+                    <div class="left-btn ">
+                        <div class="left-btn-child btn-del">删除</div>
+                    </div>
+                </div>  
+            </div>  
+            <div class="line-wrapper">  
+                <div class="line-scroll-wrapper">  
+                    <div class="line-normal-wrapper">1+1在什么情况下不等于三？</div>  
+                    <div class="left-btn ">
+                        <div class="left-btn-child btn-rename">改名</div>
+                        <div class="left-btn-child btn-del">删除</div>
+                    </div>
+                </div>  
+            </div>  
+        </div>
+    </body>  
+    <script type="text/javascript" src="http://ifuyuan.wang/gitdemo/Router/script/zepto.min.js"></script>  
+    <script type="text/javascript" src="../dist/script/fx.js"></script> 
+    <script type="text/javascript" src="../dist/script/sliderLeft.js"></script>
+    <script type="text/javascript">  
+        //调用
+        sliderLeft($('.line-scroll-wrapper'),$(".left-btn"));
+        
+        $('.line-wrapper').on('touchend','.btn-del',function(){
+            $(this).parents('.line-wrapper').remove();
+        }).on('touchend','.btn-rename',function(){
+            alert('改名操作')
+        }).on('touchend','.btn-totop',function(){
+            alert('置顶操作')
+        })
+        </script>  
+</html>  

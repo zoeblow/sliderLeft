@@ -1,0 +1,42 @@
+* {  
+                margin: 0;  
+                padding: 0;  
+            }  
+            .wrapper{
+                width: 95%;
+                margin: 0 auto;
+            }
+            .line-wrapper {  
+                width: 100%;  
+                overflow: hidden;  
+                font-size: 1.3em;  
+                border-bottom: 1px solid #aaa;  
+                padding-top: 0.3em;  
+                padding-bottom: 0.3em;  
+            }  
+            .line-wrapper *{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .line-scroll-wrapper {  
+                white-space: nowrap;  
+            }  
+            .left-btn {  
+                float: left;
+                font-size: 0.8em;  
+                padding-top: 0.3em;  
+                padding-bottom: 0.3em; 
+                opacity:0; 
+            } 
+            .btn-del{color:red;} 
+            .btn-rename{color:green;} 
+            .btn-totop{color:blue;} 
+            .line-normal-wrapper {  
+                display: inline-block;  
+                float: left;  
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }  
+            .left-btn-child{display:inline-block;}
