@@ -2,7 +2,6 @@
 
 sliderLeft 是一款模拟 QQ 这样的软件左滑操作(删除、重命名、置顶等 )，基于 zepto 和 zepto_fx 或者 jquery，因为我用到了 animate()方法。
 
-
 ## About
 
 ### 创建时间 2016-10-20 09:58
@@ -33,7 +32,7 @@ sliderLeft 是一款模拟 QQ 这样的软件左滑操作(删除、重命名、�
 <div class="line-wrapper">
   <div class="line-scroll-wrapper">
     <div class="line-normal-wrapper">轻松的方式符合u</div>
-    <div class="left-btn ">
+    <div class="left-btn">
       <div class="left-btn-child btn-del">删除</div>
     </div>
   </div>
