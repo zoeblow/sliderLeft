@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>sliderLeft - 一个已用的数字滚动插件</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./dist/style/sliderLeft.css"
+    />
+    <style>
+      :root {
+        --theme-color: #4481eb;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -webkit-overflow-scrolling: touch;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-text-size-adjust: none;
+        -webkit-touch-callout: none;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+      }
+      .github-corner {
+        border-bottom: 0;
+        position: fixed;
+        right: 0;
+        text-decoration: none;
+        top: 0;
+        z-index: 1;
+      }
+      .github-corner svg {
+        color: #fff;
+        fill: #42b983;
+        fill: var(--theme-color, #42b983);
+        height: 80px;
+        width: 80px;
+      }
+      .markdown-body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 16px;
+        line-height: 1.5;
+        word-wrap: break-word;
+        margin-left: auto;
+        max-width: 800px;
+        margin-right: auto;
+      }
+      .markdown-body h2::before {
+        content: "#";
+        color: var(--theme-color, #42b983);
+        font-size: 36px;
+        display: inline-block;
+        padding-right: 10px;
+        margin-left: -30px;
+      }
+      .markdown-body img.code {
+        width: 800px;
+      }
+      .markdown-body table {
+        display: block;
+        width: 800px;
+        width: max-content;
+        max-width: 100%;
+        overflow: auto;
+      }
+      .markdown-body table tr {
+        background-color: #fff;
+        border-top: 1px solid hsla(210, 18%, 87%, 1);
+      }
+      .markdown-body table th {
+        font-size: 1.1em;
+      }
+      .markdown-body table td,
+      .markdown-body table th {
+        padding: 6px 13px;
+        border: 1px solid #d0d7de;
+      }
+      .red{
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a
+      href="https://github.com/zoeblow/sliderLeft"
+      target="_blank"
+      class="github-corner"
+      aria-label="View source on Github"
+      ><svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+          d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+          fill="currentColor"
+          style="transform-origin: 130px 106px"
+          class="octo-arm"
+        ></path>
+        <path
+          d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+          fill="currentColor"
+          class="octo-body"
+        ></path></svg
+    ></a>
+    <div class="markdown-body">
+      <h1 style="text-align: center; font-size: 47px; margin-top: 26px">
+        <span
+          >sliderLeft
+          <sup style="font-size: 16px; font-weight: normal">v1.0</sup></span
+        >
+        <a href="https://github.com/zoeblow/sliderLeft" target="_blank">
+          <img
+            src="https://img.shields.io/github/stars/zoeblow/sliderLeft?color=yellow&amp;logo=github&amp;style=flat-square"
+          />
+        </a>
+      </h1>
+
+      <br />
+      <p>
+        sliderLeft 是一款模拟QQ这样的软件左滑操作(删除、重命名、置顶等 )，基于zepto和zepto_fx或者jquery，因为我用到了animate()方法。
+      </p>
+      <br />
+      <h2>用法 Use</h2>
+      <br />
+      <img class="code" src="./carbon-code.svg" alt="" />
+      <br />
+      <br />
+      <h2>参数 API</h2>
+      <br />
+      <table cellspacing="0" border="1">
+        <thead>
+          <tr>
+            <th align="center">参数</th>
+            <th align="center">取值类型</th>
+            <th align="center">默认值</th>
+            <th align="left">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">ele</td>
+            <td align="center">String</td>
+            <td align="center">必填项</td>
+            <td align="left">那个区域需要用到滑动操作： zepto/jquery 选择器</td>
+          </tr>
+          <tr>
+            <td align="center">rightEle</td>
+            <td align="center">String</td>
+            <td align="center">必填项</td>
+            <td align="left">操作按钮组的选择器 ： zepto/jquery 选择器</td>
+          </tr>
+        </tbody>
+      </table>
+      <br /><br />
+      <h2>用例 DEMO</h2>
+      <p class="red">需要模拟成手机，为了更好的效果请移步<a href="./demo.html"> Demo</a></p>
+      <br />
+      <br />
+      <div class="Demo-wrapper">
+        <div class="wrapper">
+          <div class="line-wrapper">
+            <div class="line-scroll-wrapper">
+              <div class="line-normal-wrapper">这是来自老刘发来的消息呢</div>
+              <div class="left-btn">
+                <div class="left-btn-child btn-del">删除</div>
+              </div>
+            </div>
+          </div>
+          <div class="line-wrapper">
+            <div class="line-scroll-wrapper">
+              <div class="line-normal-wrapper">1990年的十大趣闻</div>
+              <div class="left-btn">
+                <div class="left-btn-child btn-del">删除</div>
+              </div>
+            </div>
+          </div>
+          <div class="line-wrapper">
+            <div class="line-scroll-wrapper">
+              <div class="line-normal-wrapper">这是来自老王发来的消息呢</div>
+              <div class="left-btn">
+                <div class="left-btn-child btn-totop">置顶</div>
+                <div class="left-btn-child btn-del">删除</div>
+              </div>
+            </div>
+          </div>
+          <div class="line-wrapper">
+            <div class="line-scroll-wrapper">
+              <div class="line-normal-wrapper">不得不看的十大奇闻</div>
+              <div class="left-btn">
+                <div class="left-btn-child btn-del">删除</div>
+              </div>
+            </div>
+          </div>
+          <div class="line-wrapper">
+            <div class="line-scroll-wrapper">
+              <div class="line-normal-wrapper">是男人就冲到一百关</div>
+              <div class="left-btn">
+                <div class="left-btn-child btn-del">删除</div>
+              </div>
+            </div>
+          </div>
+          <div class="line-wrapper">
+            <div class="line-scroll-wrapper">
+              <div class="line-normal-wrapper">这是来自老张发来的消息呢</div>
+              <div class="left-btn">
+                <div class="left-btn-child btn-del">删除</div>
+              </div>
+            </div>
+          </div>
+          <div class="line-wrapper">
+            <div class="line-scroll-wrapper">
+              <div class="line-normal-wrapper">香水百合的唱法</div>
+              <div class="left-btn">
+                <div class="left-btn-child btn-del">删除</div>
+              </div>
+            </div>
+          </div>
+          <div class="line-wrapper">
+            <div class="line-scroll-wrapper">
+              <div class="line-normal-wrapper">1+1在什么情况下不等于三？</div>
+              <div class="left-btn">
+                <div class="left-btn-child btn-rename">改名</div>
+                <div class="left-btn-child btn-del">删除</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <br /><br />
+  </body>
+  <script type="text/javascript" src="./dist//script/zepto.min.js"></script>
+  <script type="text/javascript" src="./dist/script/fx.js"></script>
+  <script type="text/javascript" src="./dist/script/sliderLeft.js"></script>
+  <script type="text/javascript">
+    //调用
+    sliderLeft($(".line-scroll-wrapper"), $(".left-btn"));
+
+    $(".line-wrapper")
+      .on("touchend", ".btn-del", function () {
+        $(this).parents(".line-wrapper").remove();
+      })
+      .on("touchend", ".btn-rename", function () {
+        alert("改名操作");
+      })
+      .on("touchend", ".btn-totop", function () {
+        alert("置顶操作");
+      });
+  </script>
+</html>

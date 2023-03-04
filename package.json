@@ -1,0 +1,22 @@
+{
+  "name": "sliderleft",
+  "version": "1.0.0",
+  "description": "sliderLeft 是一款模拟 QQ 这样的软件左滑操作(删除、重命名、置顶等 )，基于 zepto 和 zepto_fx 或者 jquery，因为我用到了 animate()方法。",
+  "main": "./dist/script/sliderLeft.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoeblow/sliderLeft.git"
+  },
+  "author": "zoeblow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoeblow/sliderLeft/issues"
+  },
+  "homepage": "https://github.com/zoeblow/sliderLeft#readme"
+}
